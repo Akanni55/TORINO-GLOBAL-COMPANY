@@ -10,19 +10,18 @@ Write a query that returns the annual profit made by BuyBuy from the year 2011 t
 Write 2 queries that return the countries where BuyBuy has made the most profit
 and also the least profit of all-time. Your query must display both results on the
 same output.
-b. Write a query that shows the Top-10 most profitable countries for BuyBuy sales
+Write a query that shows the Top-10 most profitable countries for BuyBuy sales
 operations from 2011 to 2016
-c. Write a query that shows the all-time Top-10 least profitable countries for BuyBuy
+Write a query that shows the all-time Top-10 least profitable countries for BuyBuy
 sales operations
 
-***Create a chart to visualize the data from your analysis in 2b
+**Create a chart to visualize the data from your analysis in 2b
 
 Write a query that ranks all product categories sold by Buybuy, from least amount
 to the most amount of all-time revenue generated.
-
 Write a query that returns Top-2 product categories offered by Buybuy with an
 all-time high number of units sold.
-
 Write a query that shows the Top 10 highest-grossing products sold by BuyBuy
 based on all-time profits.
+
 **Create a chart to visualize your analysis in 3b
