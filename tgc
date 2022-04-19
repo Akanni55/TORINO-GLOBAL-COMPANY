@@ -1,0 +1,102 @@
+CREATE TABLE tgc (   
+    year varchar,
+	 month varchar,
+	  day_of_week varchar,
+	   quarter int,
+        id varchar,
+	     age int,
+	      age_group varchar,
+    		gender varchar,
+    		 country text,
+    		  state text,
+               category varchar,
+                subcategory varchar,
+    		 	 product varchar,
+    			  quantity int,
+                   uni_cost int,
+                    price int,
+                     cost int,
+                      profit int,
+	                   revenue int
+                        );
+	
+COPY tgc
+ FROM 'C:\Users\HP\Downloads\SQL DATASETS\Torino global consult\TGC data.csv'
+  DELIMITER ',' CSV 
+   HEADER;
+
+select *
+ from tgc
+
+/*CASES*/
+
+--case 1
+select sum(Profit)
+ from tgc
+ 
+--case 2
+select sum(profit) as Total_profit_from_Q2
+ from tgc
+  where quarter = 2
+
+--case 3
+select year, sum(profit) as Anual_profit
+ from tgc
+  group by 1
+
+--case 4
+(select country, sum(profit)
+ from tgc
+  group by 1
+   order by 2 desc
+    limit 1)
+    UNION
+	(select country, sum(profit)
+   from tgc
+  group by 1
+ order by 2 asc
+limit 1)
+
+--case 5
+select country, sum(profit) as profit
+ from tgc
+  where year
+   in ('2013','2014','2016')
+    group by 1
+     order by 2 desc
+      limit 5
+	
+--case 6
+select country, sum(profit) as profit
+ from tgc
+  group by 1
+   order by 2 asc
+    limit 5
+
+--case 7
+select category, sum(quantity) as quantity_sold, sum(revenue) as all_time_revenue
+ from tgc
+  group by 1
+   order by 2 desc
+  
+--case 8
+select category as pr0duct_category, sum(quantity) as total_unit_sold
+ from tgc
+  group by 1
+   order by 2 desc
+    limit 2
+	
+--case 9
+select product, sum(profit) as grossing_profit
+ from tgc
+  group by 1
+   order by 2 desc
+    limit 10
+    
+  
+    
+
+
+
+
+
