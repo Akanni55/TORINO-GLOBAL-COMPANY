@@ -1,24 +1,24 @@
 CREATE TABLE tgc (   
     year varchar,
-	 month varchar,
-	  day_of_week varchar,
-	   quarter int,
-        id varchar,
-	     age int,
-	      age_group varchar,
-    		gender varchar,
-    		 country text,
-    		  state text,
-               category varchar,
-                subcategory varchar,
-    		 	 product varchar,
-    			  quantity int,
-                   uni_cost int,
-                    price int,
-                     cost int,
-                      profit int,
-	                   revenue int
-                        );
+    month varchar,
+    day_of_week varchar,
+    quarter int,
+    id varchar,
+    age int,
+    age_group varchar,
+    gender varchar,
+    country text,
+    state text,
+    category varchar,
+    subcategory varchar,
+    product varchar,
+    quantity int,
+    uni_cost int,
+    price int,
+    cost int,
+    profit int,
+    revenue int
+    );
 	
 COPY tgc
  FROM 'C:\Users\HP\Downloads\SQL DATASETS\Torino global consult\TGC data.csv'
